@@ -1,0 +1,598 @@
+<!-- hotem management index/main page html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>HOTEL MANAGEMENT</title>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="./img/hotel-3.webp" class="navbar-logo" alt="logo photo">
+            <a href="#" class="navbar-brand">HOTEL MANAGEMENT</a>
+            <div class="navbar-menu">
+                <ul class="navbar-nav">
+                    <div id="search-container">
+                        <input type="text" id="search-box" placeholder="Search for hotels...">
+                    </div>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#hotel-container" class="nav-link">Book Now!</a></li>
+                    <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="signup.html" class="nav-link">Signup</a></li>
+
+                    <!-- profile area -->
+                    <li class="nav-item dropdown" id="profileMenu">
+                        <a href="#" class="nav-link" id="profileDropdown">
+                            <img src="./img/user.png" alt="Profile Icon"class="profile-icon">
+                            <br>Profile
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="./Profile.html" class="dropdown-item">Profile</a>
+                            <a href="./admin-login.html" class="dropdown-item">Admin Login</a>
+                            <a href="./admin-singup.html" class="dropdown-item" style="display: none;">Admin Signup</a>
+                            <a href="/logout" class="dropdown-item">Login/Logout</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- container  -->
+    <div class="container">
+        <div class="homepasa">
+
+            <!-- main hotel banner image -->
+            <img src="./img/imggg1.jpg" alt="home page photo" height="400px">
+            <div class="checkbookin">
+                <div class="checkbookinavaliability">
+                    <!-- heading fot checking -->
+                    <h4>Check Booking Availability</h4>
+                </div>
+
+                <!-- hotel availblity checking form -->
+                <form action="/submit-date" method="post">
+                    <label for="date">Date-in</label>
+                    <input type="date" id="date" name="date" pattern="(0[1-9]|1[0-2])-\d{4}" required>
+                    <label for="Date-in">Date-out</label>
+                    <input type="date" id="date" name="date">
+                    <label for="adults">Adults</label>&nbsp;&nbsp;&nbsp;
+                    <select id="adults" name="adults">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="children">Children</label>
+                    <select id="children" name="children">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+
+                    <!-- form submission button -->
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- hotel list heading div -->
+    <div class="hotalhomepagashowtest1">
+        <h1>ALL HOTELS LIST</h1>
+    </div>
+
+
+    <!-- all hotel listing with pic, facilities and booking details -->
+
+    <!-- 1st row -->
+    <div class="hotalhomepagashowdi" id="hotel-container">
+
+        <!-- hotel 1 -->
+        <div class="hotalhomepagashow" data-hotel-name="Boulevard" data-price="600">
+            <img src="./img/hotel (2).webp" alt="hotalphoto" />
+            <h3>Boulevard<br><span>₹600 per night</span></h3>
+            <div class="features">
+                <p>Features</p>
+                <div class="Feotures1">
+                    <p>Bedroom</p>
+                    <p>Balcony</p>
+                    <p>Kitchen</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Facilities</p>
+                <div class="Feotures1">
+                    <p>Wifi</p>
+                    <p>Air Conditioner</p>
+                    <p>Room Heater</p>
+                    <p>Geyser</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Guests</p>
+                <div class="Feotures1">
+                    <p>9 Adults</p>
+                    <p>10 Children</p>
+                </div>
+                <div class="booknow">
+                    <button><a href="hotelbooking.html">Book now</a></button>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- hotel 2 -->
+
+        <div class="hotalhomepagashow" data-hotel-name="Luxury" data-price="500">
+            <img src="./img/hotel (3).webp" alt="hotalphoto" />
+            <h3>Luxury<br><span>₹500 per night</span></h3>
+            <div class="features">
+                <p>Features</p>
+                <div class="Feotures1">
+                    <p>Bedroom</p>
+                    <p>Balcony</p>
+                    <p>Kitchen</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Facilities</p>
+                <div class="Feotures1">
+                    <p>Wifi</p>
+                    <p>Air Conditioner</p>
+                    <p>Room Heater</p>
+                    <p>Geyser</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Guests</p>
+                <div class="Feotures1">
+                    <p>9 Adults</p>
+                    <p>10 Children</p>
+                </div>
+                <div class="booknow">
+                    <button><a href="hotelbooking.html">Book now</a></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- hotel 3 -->
+
+        <div class="hotalhomepagashow" data-hotel-name="Deluxe" data-price="700">
+            <img src="./img/hotel (35).webp" alt="hotalphoto" />
+            <h3>Deluxe<br><span>₹700 per night</span></h3>
+            <div class="features">
+                <p>Features</p>
+                <div class="Feotures1">
+                    <p>Bedroom</p>
+                    <p>Balcony</p>
+                    <p>Kitchen</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Facilities</p>
+                <div class="Feotures1">
+                    <p>Wifi</p>
+                    <p>Air Conditioner</p>
+                    <p>Room Heater</p>
+                    <p>Geyser</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Guests</p>
+                <div class="Feotures1">
+                    <p>3 Adults</p>
+                    <p>2 Children</p>
+                </div>
+                <div class="booknow">
+                    <button><a href="hotelbooking.html">Book now</a></button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2nd row -->
+    <div class="hotalhomepagashowdi" id="hotel-container">
+
+        <!-- hotel 1 -->
+        <div class="hotalhomepagashow" data-hotel-name="Boulevard" data-price="800">
+            <img src="./img/hotel (20).webp" alt="hotalphoto" />
+            <h3>Limak<br><span>₹800 per night</span></h3>
+            <div class="features">
+                <p>Features</p>
+                <div class="Feotures1">
+                    <p>Bedroom</p>
+                    <p>Balcony</p>
+                    <p>Kitchen</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Facilities</p>
+                <div class="Feotures1">
+                    <p>Wifi</p>
+                    <p>Air Conditioner</p>
+                    <p>Room Heater</p>
+                    <p>Geyser</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Guests</p>
+                <div class="Feotures1">
+                    <p>9 Adults</p>
+                    <p>10 Children</p>
+                </div>
+                <div class="booknow">
+                    <button><a href="hotelbooking.html">Book now</a></button>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- hotel 2 -->
+        <div class="hotalhomepagashow" data-hotel-name="Luxury" data-price="1000">
+            <img src="./img/hotel-3.webp" alt="hotalphoto" />
+            <h3>Everyetic<br><span>₹1000 per night</span></h3>
+            <div class="features">
+                <p>Features</p>
+                <div class="Feotures1">
+                    <p>Bedroom</p>
+                    <p>Balcony</p>
+                    <p>Kitchen</p>
+                    <p>Pool</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Facilities</p>
+                <div class="Feotures1">
+                    <p>Wifi</p>
+                    <p>Air Conditioner</p>
+                    <p>Room Heater</p>
+                    
+                </div>
+            </div>
+            <div class="features">
+                <p>Guests</p>
+                <div class="Feotures1">
+                    <p>9 Adults</p>
+                    <p>10 Children</p>
+                </div>
+                <div class="booknow">
+                    <button id="bookn"><a href="hotelbooking.html">Book now</a></button>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- hotel 3 -->
+        <div class="hotalhomepagashow" data-hotel-name="Deluxe" data-price="900">
+            <img src="./img/hotel (4).webp" alt="hotalphoto" />
+            <h3>Intechnic<br><span>₹900 per night</span></h3>
+            <div class="features">
+                <p>Features</p>
+                <div class="Feotures1">
+                    <p>Bedroom</p>
+                    <p>Balcony</p>
+                    <p>Kitchen</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Facilities</p>
+                <div class="Feotures1">
+                    <p>Wifi</p>
+                    <p>Air Conditioner</p>
+                    <p>Room Heater</p>
+                    <p>Geyser</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Guests</p>
+                <div class="Feotures1">
+                    <p>3 Adults</p>
+                    <p>2 Children</p>
+                </div>
+                <div class="booknow">
+                    <button><a href="hotelbooking.html">Book now</a></button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3rd row -->
+    <div class="hotalhomepagashowdi" id="hotel-container">
+
+        <!-- hotel 1 -->
+        <div class="hotalhomepagashow" data-hotel-name="Boulevard" data-price="400">
+            <img src="./img/hotel (5).webp" alt="hotalphoto" />
+            <h3>Carmen<br><span>₹400 per night</span></h3>
+            <div class="features">
+                <p>Features</p>
+                <div class="Feotures1">
+                    <p>Bedroom</p>
+                    <p>Balcony</p>
+                    <p>Kitchen</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Facilities</p>
+                <div class="Feotures1">
+                    <p>Wifi</p>
+                    <p>Air Conditioner</p>
+                    <p>Room Heater</p>
+                    <p>Geyser</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Guests</p>
+                <div class="Feotures1">
+                    <p>9 Adults</p>
+                    <p>10 Children</p>
+                </div>
+                <div class="booknow">
+                    <button><a href="hotelbooking.html">Book now</a></button>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- hotel 2 -->
+        <div class="hotalhomepagashow" data-hotel-name="Luxury" data-price="300">
+            <img src="./img/hotel (6).webp" alt="hotalphoto" />
+            <h3>Wikwarden<br><span>₹300 per night</span></h3>
+            <div class="features">
+                <p>Features</p>
+                <div class="Feotures1">
+                    <p>Bedroom</p>
+                    <p>Balcony</p>
+                    <p>Kitchen</p>
+                    <p>Bathtub</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Facilities</p>
+                <div class="Feotures1">
+                    <p>Wifi</p>
+                    <p>Air Conditioner</p>
+                    <p>Room Heater</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Guests</p>
+                <div class="Feotures1">
+                    <p>9 Adults</p>
+                    <p>10 Children</p>
+                </div>
+                <div class="booknow">
+                    <button id="bookn"><a href="hotelbooking.html">Book now</a></button>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- hotel 3 -->
+        <div class="hotalhomepagashow" data-hotel-name="Deluxe" data-price="1100">
+            <img src="./img/hotel (7).webp" alt="hotalphoto" />
+            <h3>Resort & Paradise<br><span>₹1100 per night</span></h3>
+            <div class="features">
+                <p>Features</p>
+                <div class="Feotures1">
+                    <p>Bedroom</p>
+                    <p>Balcony</p>
+                    <p>Kitchen</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Facilities</p>
+                <div class="Feotures1">
+                    <p>Wifi</p>
+                    <p>Air Conditioner</p>
+                    <p>Room Heater</p>
+                    <p>Geyser</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Guests</p>
+                <div class="Feotures1">
+                    <p>3 Adults</p>
+                    <p>2 Children</p>
+                </div>
+                <div class="booknow">
+                    <button><a href="hotelbooking.html">Book now</a></button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4th row -->
+    <div class="hotalhomepagashowdi" id="hotel-container">
+
+        <!-- hotel 1 -->
+        <div class="hotalhomepagashow" data-hotel-name="Boulevard" data-price="1200">
+            <img src="./img/hotel (8).webp" alt="hotalphoto" />
+            <h3>Riyadh Hotel<br><span>₹1200 per night</span></h3>
+            <div class="features">
+                <p>Features</p>
+                <div class="Feotures1">
+                    <p>Bedroom</p>
+                    <p>Balcony</p>
+                    <p>Kitchen</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Facilities</p>
+                <div class="Feotures1">
+                    <p>Wifi</p>
+                    <p>Air Conditioner</p>
+                    <p>Room Heater</p>
+                    <p>Geyser</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Guests</p>
+                <div class="Feotures1">
+                    <p>9 Adults</p>
+                    <p>10 Children</p>
+                </div>
+                <div class="booknow">
+                    <button><a href="hotelbooking.html">Book now</a></button>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- hotel 2 -->
+        <div class="hotalhomepagashow" data-hotel-name="Luxury" data-price="500">
+            <img src="./img/hotel (9).webp" alt="hotalphoto" />
+            <h3>Fariyas<br><span>₹500 per night</span></h3>
+            <div class="features">
+                <p>Features</p>
+                <div class="Feotures1">
+                    <p>Bedroom</p>
+                    <p>Balcony</p>
+                    <p>Kitchen</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Facilities</p>
+                <div class="Feotures1">
+                    <p>Wifi</p>
+                    <p>Air Conditioner</p>
+                    <p>Room Heater</p>
+                    <p>Geyser</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Guests</p>
+                <div class="Feotures1">
+                    <p>9 Adults</p>
+                    <p>10 Children</p>
+                </div>
+                <div class="booknow">
+                    <button id="bookn"><a href="hotelbooking.html">Book now</a></button>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- hotel 3 -->
+        <div class="hotalhomepagashow" data-hotel-name="Deluxe" data-price="700">
+            <img src="./img/hotel (10).webp" alt="hotalphoto" />
+            <h3>Rafael<br><span>₹700 per night</span></h3>
+            <div class="features">
+                <p>Features</p>
+                <div class="Feotures1">
+                    <p>Bedroom</p>
+                    <p>Balcony</p>
+                    <p>Kitchen</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Facilities</p>
+                <div class="Feotures1">
+                    <p>Wifi</p>
+                    <p>Air Conditioner</p>
+                    <p>Room Heater</p>
+                    <p>Geyser</p>
+                </div>
+            </div>
+            <div class="features">
+                <p>Guests</p>
+                <div class="Feotures1">
+                    <p>3 Adults</p>
+                    <p>2 Children</p>
+                </div>
+                <div class="booknow">
+                    <button><a href="hotelbooking.html">Book now</a></button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footor area -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <h3>HOTEL MANAGEMENT</h3>
+                <p>Welcome to Hotel – Your home away from home! We pride ourselves on offering exceptional hospitality and a comfortable stay, ensuring every guest feels special. With a range of amenities and personalized services, we strive to make your experience memorable. Whether you're here for business or leisure, our dedicated team is here to cater to your needs. Explore our beautifully designed rooms, indulge in delicious dining options, and enjoy convenient access to local attractions. Thank you for choosing Hotel; we look forward to serving you again!</p>
+            </div>
+            <div class="footer-content">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Images</a></li>
+                    <li><a href="#">Booking</a></li>
+                    <li><a href="#">Rooms</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>Email: yourname@gmail.com</li>
+                    <li>Phone: 91+ 9999999999</li>
+                    <li>Address: Solapur, Maharashtra</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; HOTEL MANAGEMENT. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchBox = document.getElementById('search-box');
+            const hotels = document.querySelectorAll('.hotalhomepagashow');
+
+            searchBox.addEventListener('input', function () {
+                const searchTerm = searchBox.value.toLowerCase();
+                hotels.forEach(hotel => {
+                    const hotelName = hotel.getAttribute('data-hotel-name').toLowerCase();
+                    if (hotelName.includes(searchTerm)) {
+                        hotel.style.display = 'block';
+                    } else {
+                        hotel.style.display = 'none';
+                    }
+                });
+            });
+        });
+        // Close the dropdown if the user clicks outside of it
+        document.addEventListener('click', function (event) {
+            var dropdown = document.querySelector('.dropdown-content');
+            var profileDropdown = document.querySelector('#profileDropdown');
+            if (!profileDropdown.contains(event.target)) {
+                dropdown.style.display = 'none';
+            }
+        });
+
+        // Keep the dropdown open if the profile icon is clicked
+        document.querySelector('#profileDropdown').addEventListener('click', function (event) {
+            var dropdown = document.querySelector('.dropdown-content');
+            dropdown.style.display = 'block';
+            event.stopPropagation();
+        });
+    </script>

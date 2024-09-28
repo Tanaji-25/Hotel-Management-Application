@@ -1,0 +1,224 @@
+<!-- user sigmup html page -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign Up Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            position: absolute;
+            width: 100%;
+            top: 0%;
+            z-index: 1000;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .navbar-logo {
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .navbar-brand {
+            font-size: 1.5em;
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar-toggler {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        .navbar-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-nav {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav-item {
+            margin-left: 20px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        #search-container {
+            margin-left: 20px;
+        }
+
+        #search-box {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Home Page Styles */
+        .homepasa img {
+            width: 100%;
+            height: 700px;
+            border: solid 1px black;
+        }
+
+        .container {
+            background-color: #fff;
+            width: 100%;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            max-width: 100%;
+            text-align: center;
+            position: absolute;
+            top: 20px;
+        }
+
+        form {
+            display: grid (100);
+            gap: 10px;
+            text-align: left;
+            margin-top: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .gender-select {
+            display: flex;
+            gap: 10px;
+        }
+
+        #submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="/img/limak.jpg" class="navbar-logo" alt="logo photo">
+            <a href="#" class="navbar-brand">HOTEL MANAGEMENT</a>
+
+            <div class="navbar-menu">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- singup form container -->
+    <div class="container">
+        <h2>Sign Up Form</h2>
+        <form action="/register" method="POST">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="text" id="dob" name="dob" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="number">Phone Number:</label>
+            <input type="text" id="number" name="number" required><br><br>
+
+            <label for="gender">Gender:</label>
+            <input type="text" id="gender" name="gender" required><br><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required><br><br>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required><br><br>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required><br><br>
+
+            <label for="pincode">Pincode:</label>
+            <input type="text" id="pincode" name="pincode" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="confirmpassword">Confirm Password:</label>
+            <input type="password" id="confirmpassword" name="confirmpassword" required><br><br>
+
+            <button type="submit">Register</button>
+            <div class="login">
+                <p>Already have an User Account? <a href="login.html">Login here</a></p>
+                <hr>
+                <h3>Have Admin account ??</h3>
+                <p><a href="admin-login.html">Admin Login here</a></p>
+
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

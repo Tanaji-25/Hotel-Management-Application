@@ -1,0 +1,52 @@
+<!-- admin sign up html page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Signup</title>
+  <link rel="stylesheet" href="admin-signup.css">
+  
+</head>
+<body>
+
+  <!-- container area -->
+  <br><br>
+  <div class="container">
+    <center><h2>Admin | Registration Form</h2></center>
+    <hr> <br><br>
+    <!-- form for admin signup -->
+    <form action="/admin-register" method="POST">
+      <div class="form-group">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="number">Phone Number:</label>
+        <input type="text" id="number" name="number" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirmpassword">Confirm Password:</label>
+        <input type="password" id="confirmpassword" name="confirmpassword" required>
+      </div>
+
+      <!-- form submission button -->
+      <button type="submit">Register</button>
+    </form>
+
+    <br>
+    <hr>
+    <p><strong>Admin Login?</strong> ||<a href="admin-login.html">Admin Login here</a></p>
+    <br>
+  </div>
+</body>
+</html>

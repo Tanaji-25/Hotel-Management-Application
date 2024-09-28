@@ -1,0 +1,59 @@
+/* admin room dahboard css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* table css */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: yellow;
+  color: red;
+}
+
+thead th {
+  padding: 10px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* image,id booking css */
+
+img.booking-image,
+img.id-image {
+  max-width: 100px;
+  height: auto;
+}
+
+img.booking-image {
+  border: 1px solid #ddd;
+}
+
+img.signature-image {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}

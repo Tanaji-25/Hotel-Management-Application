@@ -1,0 +1,170 @@
+<!-- room booking user display html page -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Room Booking</title>
+    <style>
+
+        /* internal css */
+
+        body{
+            background-color: white;
+        }
+        .booking {
+            border: 1px solid #000;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .bookings-container{
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- navbar area -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="./img/chotel.jpeg" class="navbar-logo" alt="logo photo">
+            <a href="#" class="navbar-brand">HOTEL MANAGEMENT</a>
+            <div class="navbar-menu">
+                <ul class="navbar-nav">
+
+
+                    <!-- hotel searching here -->
+                    <div id="search-container">
+                        <input type="text" id="search-box" placeholder="Search for hotels...">
+                    </div>
+
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="hotelbooking.html" class="nav-link">Booking</a></li>
+                    <li class="nav-item"><a href="room.html" class="nav-link">Room</a></li>
+                    <li class="nav-item"><a href="signup.html" class="nav-link">Signup</a></li>
+                    <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+
+                    <!-- profile section -->
+                    <li class="nav-item dropdown" id="profileMenu">
+                        <a href="#" class="nav-link" id="profileDropdown">
+                            <img src="./img/whatdoeslt.jpeg" alt="Profile Icon" class="profile-icon">
+                            <br>profile
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="./Profile.html" class="dropdown-item">Profile</a>
+                            <a href="./admin-login.html" class="dropdown-item">Admin Login</a>
+                            <a href="./admin-singup.html" class="dropdown-item">Admin Singup</a>
+                            <a href="/logout" class="dropdown-item">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- room booking heading -->
+    <center><h1>Room Bookings</h1></center>
+    <div id="bookings-container"></div>
+
+
+
+    <!-- javscript area -->
+    <script>
+
+        // function for fetching the ropom data
+        async function fetchBookingData() {
+            try {
+                const response = await fetch('/api/bookings');
+                console.log('Fetching booking data');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch booking data');
+                }
+                const bookings = await response.json();
+                displayBookings(bookings);
+                console.log("bookings", bookings);
+            } catch (error) {
+                console.error('Error fetching booking data:', error);
+            }
+        }
+
+        // function for display the bookings
+
+        function displayBookings(bookings) {
+            const bookingsContainer = document.getElementById('bookings-container');
+            bookingsContainer.innerHTML = '';
+
+            bookings.forEach(booking => {
+                const bookingElement = document.createElement('div');
+                bookingElement.classList.add('booking');
+
+                bookingElement.innerHTML = `
+            <h3>${booking.firstname}</h3>
+            <p>D.O.B.: ${booking.dob}</p>
+            <p>Email: ${booking.email}</p>
+            <p>City: ${booking.city}</p>
+            <p>Address: ${booking.address}</p>
+            <p>PIN Code: ${booking.pincode}</p>
+            <p>Check-in: ${booking.checkin} at ${booking.time}</p>
+            <p>Check-out: ${booking.checkout}</p>
+            <p>Hotel Name: ${booking.hotelname}</p>
+            ${booking.imageSrc ? `<img src="${booking.imageSrc}" alt="Image" style="width:100px;height:100px;">` : ''}
+            ${booking.idSrc ? `<img src="${booking.idSrc}" alt="ID" style="width:100px;height:100px;">` : ''}
+        `;
+
+                bookingsContainer.appendChild(bookingElement);
+            });
+        }
+
+        function arrayBufferToBase64(buffer) {
+            let binary = '';
+            const bytes = new Uint8Array(buffer);
+            const len = bytes.byteLength;
+            for (let i = 0; i < len; i++) {
+                binary += String.fromCharCode(bytes[i]);
+            }
+            return window.btoa(binary);
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchBookingData);
+
+        // Close the dropdown if the user clicks outside of it
+        document.addEventListener('click', function (event) {
+            var dropdown = document.querySelector('.dropdown-content');
+            var profileDropdown = document.querySelector('#profileDropdown');
+            if (!profileDropdown.contains(event.target)) {
+                dropdown.style.display = 'none';
+            }
+        });
+
+        // Keep the dropdown open if the profile icon is clicked
+        document.querySelector('#profileDropdown').addEventListener('click', function (event) {
+            var dropdown = document.querySelector('.dropdown-content');
+            dropdown.style.display = 'block';
+            event.stopPropagation();
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchBox = document.getElementById('search-box');
+            const hotels = document.querySelectorAll('.hotalhomepagashow');
+
+            searchBox.addEventListener('input', function () {
+                const searchTerm = searchBox.value.toLowerCase();
+                hotels.forEach(hotel => {
+                    const hotelName = hotel.getAttribute('data-hotel-name').toLowerCase();
+                    if (hotelName.includes(searchTerm)) {
+                        hotel.style.display = 'block';
+                    } else {
+                        hotel.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

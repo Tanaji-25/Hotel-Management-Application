@@ -1,0 +1,98 @@
+<!-- admin room booking html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Bookings</title>
+  <link rel="stylesheet" href="admin-room-book.css"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+
+  <!-- heading area -->
+  <h1>All Bookings</h1>
+
+  <!-- table for showing the booked room by users -->
+  <table id="bookings-table" border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Pincode</th>
+        <th>Check-in</th>
+        <th>Check-out</th>
+        <th>Time</th>
+        <th>Hotel Name</th>
+        <th>Image</th>
+        <th>ID</th>
+      </tr>
+    </thead>
+    <tbody id="bookings-list">
+      <!-- Data will be inserted here by JavaScript -->
+    </tbody>
+  </table>
+
+  <!-- javasript area -->
+
+  <script>
+
+    // javascript for admin romm booking fetching
+    async function fetchBookings() {
+      try {
+        const response = await fetch('/api/admin/bookings');
+        const bookings = await response.json();
+        const bookingsList = document.getElementById('bookings-list');
+
+        bookings.forEach(booking => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${booking.firstname}</td>
+            <td>${booking.dob}</td>
+            <td>${booking.email}</td>
+            <td>${booking.mobile}</td>
+            <td>${booking.address}</td>
+            <td>${booking.city}</td>
+            <td>${booking.state}</td>
+            <td>${booking.pincode}</td>
+            <td>${booking.checkin}</td>
+            <td>${booking.checkout}</td>
+            <td>${booking.time}</td>
+            <td>${booking.hotelname}</td>
+            <td><img src="${booking.imageSrc}" alt="Booking Image" class="booking-image" /></td>
+            <td><img src="${booking.idSrc}" alt="id Image" class="id-image" /></td>
+          `;
+          bookingsList.appendChild(row);
+        });
+      } catch (error) {
+        console.error('Error fetching bookings:', error);
+      }
+    }
+
+    fetchBookings();
+
+    // Close the dropdown if the user clicks outside of it
+    document.addEventListener('click', function (event) {
+      var dropdown = document.querySelector('.dropdown-content');
+      var profileDropdown = document.querySelector('#profileDropdown');
+      if (!profileDropdown.contains(event.target)) {
+        dropdown.style.display = 'none';
+      }
+    });
+
+    // Keep the dropdown open if the profile icon is clicked
+    document.querySelector('#profileDropdown').addEventListener('click', function (event) {
+      var dropdown = document.querySelector('.dropdown-content');
+      dropdown.style.display = 'block';
+      event.stopPropagation();
+    });
+  </script>
+</body>
+
+</html>

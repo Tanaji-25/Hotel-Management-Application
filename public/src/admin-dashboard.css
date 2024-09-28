@@ -1,0 +1,307 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+/* Container for the main content */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header styles */
+h1 {
+    /* background: #333; */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    margin: 0;
+}
+
+/* Form styles */
+form {
+    background: #fff;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+form label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+form input, 
+form select, 
+form button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+
+#show-form{
+    background-color: rgb(10, 180, 10);
+    color: white;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, 
+td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* th {
+    background: #333;
+    color: #fff;
+} */
+thead th{
+    background-color: green;
+}
+tbody tr{
+    background-color: gray;
+}
+tr:hover {
+    background:rgba(11, 1, 10, 0.733);
+    color: rgba(255, 255, 255, 0.862);
+}
+
+#add-user{
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    color: #fff;
+    cursor: pointer;
+}
+#delete-user {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background: red;
+    color: #fff;
+    cursor: pointer;
+}
+button:hover {
+    background: #c0392b;
+}
+#admindas h1{
+    border: solid 1px black;
+    background-color: black;
+    color: rgb(155, 121, 121);
+}
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #a72c2c;
+    color: white;
+    padding: 10px 0;
+    /* position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navbar-logo {
+    height: 50px;
+    border-radius: 50%;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-toggler {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+#search-container {
+    margin-left: 20px;
+}
+
+#search-box {
+    padding: 5px;
+    width: 300;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Home Page Styles */
+.homepasa img {
+    width: 100%;
+    height: 700px;
+    border: solid 1px black;
+}
+
+/* Add styles for the profile icon */
+.profile-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Dropdown menu */
+.nav-item.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-item.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+    margin-top: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.nav-item.dropdown .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-item.dropdown .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.nav-item.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.checkbookin {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 98%;
+    position: absolute;
+    top: 90%;
+}
+
+.checkbookin h3 {
+    margin-top: 0;
+}
+
+.checkbookin input, .checkbookin select, .checkbookin button {
+    width: 44%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.checkbookin button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+.checkbookin button:hover {
+    background-color: #555;
+}
+
+.search-container{
+    width: 300px;
+    height: 50px;
+}
