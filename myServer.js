@@ -1,4 +1,4 @@
-const express = require('express');
+Pconst express = require('express');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const path = require('path');
@@ -101,7 +101,7 @@ app.post('/register', async (req, res) => {
     req.session.userId = register._id;
     req.session.userEmail = register.email; // Set user email in session
 
-    res.redirect('/profile.html'); // Redirect to the profile page after successful registration
+    res.redirect('/Profile.html'); // Redirect to the profile page after successful registration
   } catch (error) {
     res.status(500).send('Error during registration');
     console.log(error)
@@ -116,7 +116,7 @@ app.post('/login', async (req, res) => {
     if (user) {
       req.session.userId = user._id;
       req.session.userEmail = user.email; // Set user email in session
-      res.redirect('/profile.html'); // Redirect to profile page after successful login
+      res.redirect('/Profile.html'); // Redirect to profile page after successful login
     } else {
       res.status(401).send('Invalid email or password');
     }
@@ -170,7 +170,7 @@ app.post('/profile-update', isAuthenticated, upload.single('file'), async (req, 
     }
 
     await Register.findByIdAndUpdate(userId, updateData);
-    res.redirect('/profile.html'); // Redirect to profile page after successful update
+    res.redirect('/Profile.html'); // Redirect to profile page after successful update
   } catch (error) {
     res.status(500).send('Error updating profile');
   }
