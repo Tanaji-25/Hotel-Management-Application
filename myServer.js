@@ -38,7 +38,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   store: MongoStore.create({
-    mongoUrl: 'mongodb://localhost:27017/HotalTestbook',
+    mongoUrl: 'mongodb+srv://TanajiJadhav2625:sumit%402625@cluster0.esltb.mongodb.net/hotelmanagement',
     mongooseConnection: mongoose.connection,
     ttl: 24 * 60 * 60 // Session TTL (optional)
   })
