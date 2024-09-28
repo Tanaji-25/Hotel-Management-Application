@@ -12,7 +12,6 @@ const connectDB = require('./public/conn');
 
 const app = express();
 const port = process.env.PORT || 3000;
-const HOST = '0.0.0.0';
 connectDB();
 const static_path = path.join(__dirname, './public/src');
 const storage = multer.memoryStorage();
@@ -380,6 +379,6 @@ app.post("/submit-date",(req,res)=>{
 
 
 
-app.listen(PORT, HOST, () => {
-  console.log(`Server is running on ${HOST}:${PORT}`);
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
