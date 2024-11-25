@@ -171,28 +171,26 @@ html {
 }
 
 /* Footer Styles */
+/* Footer Styles */
 .footer {
     background-color: #3949ab;
     color: white;
-    padding: 40px 0;
+    padding: 20px 0;
     text-align: center;
-    font-size: 0.9em;
-    margin-top: 30px;
-}
-
-.footer-content {
-    margin-bottom: 20px;
+    font-size: 0.8em;
 }
 
 .footer-content h3 {
-    font-size: 1.2em;
+    font-size: 1em;
     color: #ffd700;
+    margin-bottom: 10px;
 }
 
 .footer-bottom {
-    font-size: 0.8em;
-    margin-top: 10px;
+    margin-top: 5px;
+    font-size: 0.75em;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
