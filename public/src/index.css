@@ -3,23 +3,22 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;  /* Light, subtle background */
+    background-color: #f4f4f9;
     color: #333;
 }
-
 html {
-    background-color: #f0f4f8;  /* Slightly lighter background */
+    background-color: #e5e5e5;
 }
 
 /* Navbar Styles */
 .navbar {
-    background-color: #ffffff;  /* Soft white background for navbar */
-    color: #333;
+    background-color: #3949ab;
+    color: white;
     padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.1), -6px -6px 15px rgba(255, 255, 255, 0.7);  /* Soft neumorphism shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-container {
@@ -38,14 +37,14 @@ html {
 .navbar-brand {
     font-size: 1.8em;
     font-weight: bold;
-    color: #3949ab;  /* Soft blue color */
+    color: white;
     text-decoration: none;
 }
 
 .navbar-toggler {
     background: none;
     border: none;
-    color: #3949ab;  /* Soft blue color for toggler */
+    color: white;
     font-size: 1.5em;
     cursor: pointer;
 }
@@ -57,14 +56,14 @@ html {
 }
 
 .nav-link {
-    color: #3949ab;  /* Soft blue for links */
+    color: white;
     text-decoration: none;
     font-size: 1.1em;
     font-weight: 500;
 }
 
 .nav-link:hover {
-    color: #ffd700;  /* Yellow color on hover */
+    color: #ffd700;
     text-decoration: underline;
 }
 
@@ -88,7 +87,7 @@ html {
     width: 100%;
     height: auto;
     border-radius: 12px;
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.1), -6px -6px 15px rgba(255, 255, 255, 0.7);  /* Neumorphism shadow */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Profile Icon */
@@ -104,10 +103,10 @@ html {
 .nav-item.dropdown .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ffffff;  /* Soft white dropdown */
+    background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.1), -6px -6px 15px rgba(255, 255, 255, 0.7);  /* Neumorphism shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     right: 0;
 }
@@ -121,15 +120,15 @@ html {
 }
 
 .nav-item.dropdown .dropdown-content a:hover {
-    background-color: #f0f0f0;  /* Light gray on hover */
+    background-color: #f0f0f0;
 }
 
 /* Hotel Card Styles */
 .hotalhomepagashow {
-    background-color: #ffffff;  /* Soft white card background */
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.1), -6px -6px 15px rgba(255, 255, 255, 0.7);  /* Neumorphism shadow */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -145,36 +144,35 @@ html {
 
 .hotalhomepagashow h3 {
     margin: 0;
-    color: #3949ab;  /* Soft blue for headings */
+    color: #3949ab;
     font-size: 1.5em;
 }
 
 .features {
     margin: 10px 0;
     font-size: 0.9em;
-    color: #555;  /* Dark gray for feature text */
+    color: #555;
 }
 
 /* Buttons */
 .booknow button {
     padding: 10px 20px;
-    background-color: #3949ab;  /* Soft blue button */
+    background-color: #3949ab;
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.1), -6px -6px 15px rgba(255, 255, 255, 0.7);  /* Neumorphism effect */
 }
 
 .booknow button:hover {
-    background-color: #2c387e;  /* Darker blue on hover */
+    background-color: #2c387e;
 }
 
 /* Footer Styles */
 .footer {
-    background-color: #3949ab;  /* Soft blue footer */
+    background-color: #3949ab;
     color: white;
     padding: 40px 0;
     text-align: center;
@@ -188,7 +186,7 @@ html {
 
 .footer-content h3 {
     font-size: 1.2em;
-    color: #ffd700;  /* Yellow footer heading */
+    color: #ffd700;
 }
 
 .footer-bottom {
