@@ -158,12 +158,12 @@ html {
 .booknow button {
     padding: 10px 20px;
     background-color: #3949ab;
+    color: white;
     border: none;
     border-radius: 8px;
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    color: white;
 }
 
 .booknow button:hover {
