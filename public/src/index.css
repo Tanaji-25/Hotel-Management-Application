@@ -3,16 +3,16 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f4f8; /* Lighter background for a fresh look */
+    background-color: #FAFAFA; /* Soft light gray background */
     color: #333;
 }
 html {
-    background-color: #e5e5e5;
+    background-color: #f4f6f9;
 }
 
 /* Navbar Styles */
 .navbar {
-    background-color: #1E88E5; /* Vibrant blue */
+    background-color: #FF6F61; /* Warm coral color matching warm tone images */
     color: white;
     padding: 15px 0;
     position: sticky;
@@ -63,7 +63,7 @@ html {
 }
 
 .nav-link:hover {
-    color: #FFD54F; /* Golden color on hover */
+    color: #FFD700; /* Golden color for hover */
     text-decoration: underline;
 }
 
@@ -120,7 +120,7 @@ html {
 }
 
 .nav-item.dropdown .dropdown-content a:hover {
-    background-color: #FFEB3B; /* Bright yellow hover */
+    background-color: #FFEB3B; /* Bright yellow for hover */
 }
 
 /* Hotel Card Styles */
@@ -144,7 +144,7 @@ html {
 
 .hotalhomepagashow h3 {
     margin: 0;
-    color: #1E88E5; /* Primary vibrant blue */
+    color: #FF6F61; /* Coral color for matching with warm-toned images */
     font-size: 1.5em;
 }
 
@@ -157,7 +157,7 @@ html {
 /* Buttons */
 .booknow button {
     padding: 10px 20px;
-    background-color: #FF7043; /* Warm orange */
+    background-color: #FF7043; /* Soft orange for button matching warm tones */
     color: white;
     border: none;
     border-radius: 8px;
@@ -172,7 +172,7 @@ html {
 
 /* Footer Styles */
 .footer {
-    background-color: #1E88E5; /* Vibrant blue */
+    background-color: #FF6F61; /* Warm coral footer */
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -181,7 +181,7 @@ html {
 
 .footer-content h3 {
     font-size: 1em;
-    color: #FFD54F; /* Golden color for headings */
+    color: #FFD700; /* Golden color for headings */
     margin-bottom: 10px;
 }
 
