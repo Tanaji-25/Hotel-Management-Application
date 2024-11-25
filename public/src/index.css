@@ -3,22 +3,25 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FAFAFA; /* Soft light gray background */
+    background-color: #F3F4F6; /* Subtle off-white background for a modern look */
     color: #333;
+    line-height: 1.5;
 }
+
 html {
-    background-color: #f4f6f9;
+    background-color: #F3F4F6;
 }
 
 /* Navbar Styles */
 .navbar {
-    background-color: #FF6F61; /* Warm coral color matching warm tone images */
+    background: linear-gradient(135deg, #6C5B7B, #355C7D); /* Modern gradient */
     color: white;
-    padding: 15px 0;
+    padding: 16px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for a floating effect */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .navbar-container {
@@ -30,13 +33,13 @@ html {
 }
 
 .navbar-logo {
-    height: 60px;
+    height: 50px;
     border-radius: 8px;
 }
 
 .navbar-brand {
-    font-size: 1.8em;
-    font-weight: bold;
+    font-size: 2em;
+    font-weight: 600;
     color: white;
     text-decoration: none;
 }
@@ -60,6 +63,7 @@ html {
     text-decoration: none;
     font-size: 1.1em;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .nav-link:hover {
@@ -69,10 +73,12 @@ html {
 
 #search-box {
     padding: 10px;
-    border-radius: 20px;
-    border: 1px solid #B0BEC5;
-    width: 200px;
-    font-size: 0.9em;
+    border-radius: 25px;
+    border: none;
+    width: 250px;
+    font-size: 1em;
+    background-color: #F0F4F8; /* Subtle background color */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft neumorphic shadow */
 }
 
 /* Container Style */
@@ -87,16 +93,22 @@ html {
     width: 100%;
     height: auto;
     border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease; /* Smooth zoom-in effect */
+}
+
+.homepasa img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
 }
 
 /* Profile Icon */
 .profile-icon {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     border: 2px solid white;
     cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Dropdown Menu */
@@ -104,90 +116,108 @@ html {
     display: none;
     position: absolute;
     background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
     padding: 10px;
     right: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft neumorphic effect */
 }
 
 .nav-item.dropdown .dropdown-content a {
     color: #333;
-    padding: 8px 12px;
+    padding: 10px;
     text-decoration: none;
     display: block;
-    font-size: 0.9em;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
 }
 
 .nav-item.dropdown .dropdown-content a:hover {
-    background-color: #FFEB3B; /* Bright yellow for hover */
+    background-color: #F0F4F8; /* Soft hover effect */
 }
 
 /* Hotel Card Styles */
 .hotalhomepagashow {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* More rounded edges for modern look */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Neumorphic shadow effect */
     margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 20px;
+    transition: box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.hotalhomepagashow:hover {
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .hotalhomepagashow img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 12px;
     object-fit: cover;
+    transition: transform 0.3s ease; /* Zoom effect on hover */
+}
+
+.hotalhomepagashow img:hover {
+    transform: scale(1.05);
 }
 
 .hotalhomepagashow h3 {
     margin: 0;
-    color: #FF6F61; /* Coral color for matching with warm-toned images */
+    color: #6C5B7B; /* Soft purple color for modern contrast */
     font-size: 1.5em;
+    font-weight: 600;
 }
 
 .features {
     margin: 10px 0;
-    font-size: 0.9em;
+    font-size: 1em;
     color: #555;
 }
 
 /* Buttons */
 .booknow button {
-    padding: 10px 20px;
-    background-color: #FF7043; /* Soft orange for button matching warm tones */
+    padding: 12px 25px;
+    background-color: #6C5B7B; /* Soft purple button */
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 1em;
+    border-radius: 25px; /* More rounded edges */
+    font-size: 1.1em;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .booknow button:hover {
-    background-color: #FF5722; /* Darker shade of orange */
+    background-color: #355C7D; /* Slightly darker shade on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+.booknow button:active {
+    transform: translateY(1px); /* Button press effect */
 }
 
 /* Footer Styles */
 .footer {
-    background-color: #FF6F61; /* Warm coral footer */
+    background: linear-gradient(135deg, #6C5B7B, #355C7D);
     color: white;
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .footer-content h3 {
-    font-size: 1em;
-    color: #FFD700; /* Golden color for headings */
-    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #FFD700; /* Gold accents for headings */
+    margin-bottom: 15px;
 }
 
 .footer-bottom {
-    margin-top: 5px;
-    font-size: 0.75em;
+    margin-top: 10px;
+    font-size: 0.8em;
     color: #B0BEC5;
 }
 
