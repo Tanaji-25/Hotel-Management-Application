@@ -1,26 +1,24 @@
 /* Global Styles */
 body {
-    font-family: 'Courier New', Courier, monospace; /* Retro font family */
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1f1f1f; /* Dark background for retro vibe */
-    color: #fff; /* White text on dark background */
+    background-color: #FAFAFA; /* Soft light gray background */
+    color: #333;
 }
-
 html {
-    background-color: #121212;
+    background-color: #f4f6f9;
 }
 
 /* Navbar Styles */
 .navbar {
-    background-color: #00bcd4; /* Neon cyan background */
+    background-color: #FF6F61; /* Warm coral color matching warm tone images */
     color: white;
-    padding: 20px 0;
+    padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-container {
@@ -34,54 +32,47 @@ html {
 .navbar-logo {
     height: 60px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-brand {
-    font-size: 2.2em;
+    font-size: 1.8em;
     font-weight: bold;
-    color: #ff4081; /* Neon pink for brand text */
+    color: white;
     text-decoration: none;
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8); /* Neon glow effect */
 }
 
 .navbar-toggler {
     background: none;
     border: none;
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
     cursor: pointer;
 }
 
 .navbar-nav {
     list-style-type: none;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 .nav-link {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
-    font-weight: 600;
-    text-transform: uppercase; /* Retro style for text */
+    font-size: 1.1em;
+    font-weight: 500;
 }
 
 .nav-link:hover {
-    color: #ffeb3b; /* Bright yellow for hover */
+    color: #FFD700; /* Golden color for hover */
     text-decoration: underline;
-    transition: all 0.3s ease-in-out;
 }
 
 #search-box {
-    padding: 12px;
+    padding: 10px;
     border-radius: 20px;
-    border: 2px solid #ff4081; /* Neon pink border */
+    border: 1px solid #B0BEC5;
     width: 200px;
-    font-size: 1em;
-    background-color: transparent;
-    color: white;
-    text-align: center;
+    font-size: 0.9em;
 }
 
 /* Container Style */
@@ -96,62 +87,52 @@ html {
     width: 100%;
     height: auto;
     border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    filter: contrast(1.2) saturate(1.5); /* Vintage photo effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Profile Icon */
 .profile-icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    border: 3px solid #ff4081; /* Neon pink border */
+    border: 2px solid white;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Dropdown Menu */
 .nav-item.dropdown .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333333;
-    border: 2px solid #ff4081;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     right: 0;
 }
 
 .nav-item.dropdown .dropdown-content a {
-    color: #ff4081;
+    color: #333;
     padding: 8px 12px;
     text-decoration: none;
     display: block;
-    font-size: 1em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 0.9em;
 }
 
 .nav-item.dropdown .dropdown-content a:hover {
-    background-color: #ff4081; /* Neon pink hover effect */
-    color: white;
+    background-color: #FFEB3B; /* Bright yellow for hover */
 }
 
 /* Hotel Card Styles */
 .hotalhomepagashow {
-    background-color: #2c2c2c;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 20px;
-    transition: all 0.3s ease-in-out;
-}
-
-.hotalhomepagashow:hover {
-    transform: translateY(-5px); /* Card hover animation */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .hotalhomepagashow img {
@@ -163,57 +144,51 @@ html {
 
 .hotalhomepagashow h3 {
     margin: 0;
-    color: #ff4081; /* Neon pink text */
-    font-size: 1.8em;
-    font-weight: 600;
+    color: #FF6F61; /* Coral color for matching with warm-toned images */
+    font-size: 1.5em;
 }
 
 .features {
     margin: 10px 0;
     font-size: 0.9em;
-    color: #cccccc; /* Lighter gray for text */
+    color: #555;
 }
 
 /* Buttons */
 .booknow button {
-    padding: 12px 25px;
-    background-color: #ff4081; /* Neon pink background */
+    padding: 10px 20px;
+    background-color: #FF7043; /* Soft orange for button matching warm tones */
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 1.1em;
-    font-weight: bold;
+    font-size: 1em;
     cursor: pointer;
-    text-transform: uppercase;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease;
 }
 
 .booknow button:hover {
-    background-color: #ff5722; /* Darker shade for hover */
-    transform: scale(1.1); /* Hover scaling effect */
+    background-color: #FF5722; /* Darker shade of orange */
 }
 
 /* Footer Styles */
 .footer {
-    background-color: #212121;
-    color: #ff4081; /* Neon pink text */
+    background-color: #FF6F61; /* Warm coral footer */
+    color: white;
     padding: 20px 0;
     text-align: center;
-    font-size: 0.9em;
-    letter-spacing: 1px;
+    font-size: 0.8em;
 }
 
 .footer-content h3 {
-    font-size: 1.2em;
-    color: #ffeb3b; /* Neon yellow for heading */
+    font-size: 1em;
+    color: #FFD700; /* Golden color for headings */
     margin-bottom: 10px;
 }
 
 .footer-bottom {
     margin-top: 5px;
     font-size: 0.75em;
-    color: #ff4081; /* Neon pink text */
+    color: #B0BEC5;
 }
 
 /* Responsive Design */
