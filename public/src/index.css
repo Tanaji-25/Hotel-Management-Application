@@ -173,27 +173,128 @@ html {
 
 /* Footer Styles */
 .footer {
-    background: linear-gradient(90deg,#ff919e, #ff6e6e);
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
     color: white;
-    padding: 40px 0;
-    text-align: center;
-    font-size: 0.9em;
-    margin-top: 30px;
+    padding: 50px 0 20px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    text-align: left;
 }
 
 .footer-content {
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 20px;
 }
 
+.footer-logo h3 {
+    font-size: 1.8em;
+    color: white;
+    margin: 0;
+    font-weight: 700;
+}
+
+.hotel-icon {
+    font-size: 2em;
+}
+
+.footer-content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
 .footer-content h3 {
-    font-size: 1.2em;
-    color:#2d2d2d;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-content h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: #fdbb2d;
+}
+
+.footer-links li, .contact-info li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-links a, .contact-info li {
+    color: white;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    color: #fdbb2d;
+    padding-left: 5px;
+}
+
+.footer-links i, .contact-info i {
+    margin-right: 10px;
+    color: #fdbb2d;
+    font-size: 0.8em;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #fdbb2d;
+    transform: translateY(-3px);
 }
 
 .footer-bottom {
-    font-size: 0.8em;
-    margin-top: 10px;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9em;
+    opacity: 0.7;
 }
+
+/* Font Awesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 /* Responsive Design */
 @media (max-width: 768px) {
